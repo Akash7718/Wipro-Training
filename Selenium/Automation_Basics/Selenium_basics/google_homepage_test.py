@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 #driver = webdriver.Edge(service=Service('../resources/msedgedriver.exe'))        #service=Service(EdgeChromiumDriverManager().install()))
-browser = input('Enter browser : ')
+browser = input('Enter your web')
 
 match(browser.lower()):
     # case 'chrome':
