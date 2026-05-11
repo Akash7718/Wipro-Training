@@ -1,0 +1,177 @@
+Feature: Admin User Search # features/admin_search.feature:1
+
+  Background:   # features/admin_search.feature:3
+
+  Scenario: Search users with multiple filter criteria using data table  # features/admin_search.feature:7
+    Given the user is logged in as "Admin" with password "admin123"      # features/steps/login_steps.py:12
+    And the user navigates to the Admin module                           # features/steps/admin_steps.py:5
+    When the user searches for a user with the following criteria        # None
+      | Username  | Admin   |
+      | User Role | Admin   |
+      | Status    | Enabled |
+    And the user clicks the search button                                # None
+    Then the search results should display matching user records         # None
+
+Feature: Leave Application Workflow # features/leave_application.feature:1
+
+  Background:   # features/leave_application.feature:3
+
+  Scenario: Apply for Medical Leave and verify pending status       # features/leave_application.feature:7
+    Given the user is logged in as "Admin" with password "admin123" # features/steps/login_steps.py:12
+    And the user navigates to the Leave module                      # features/steps/leave_steps.py:6
+    When the user selects leave type "CAN - Medical"                # features/steps/leave_steps.py:13
+      Traceback (most recent call last):
+        File "C:\Program Files\Python314\Lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+          ~~~~~~~~~^^^^^^^^^^^^^^^^
+        File "C:\Program Files\Python314\Lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\leave_steps.py", line 15, in step_select_leave_type
+          context.leave_page.select_leave_type(leave_type)
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+        File "C:\Users\wprjavanguser\Downloads\orangehrm_bdd (2)\orangehrm_bdd\features\..\pages\leave_page.py", line 28, in select_leave_type
+          self.wait.until(EC.element_to_be_clickable(self.LEAVE_TYPE_DROPDOWN)).click()
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+        File "C:\Program Files\Python314\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 94, in click
+          self._execute(Command.CLICK_ELEMENT)
+          ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Program Files\Python314\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+          return self._parent.execute(command, params)
+                 ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+        File "C:\Program Files\Python314\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 347, in execute
+          self.error_handler.check_response(response)
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+        File "C:\Program Files\Python314\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+          raise exception_class(message, screen, stacktrace)
+      selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+        (Session info: chrome=148.0.7778.97); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+      Stacktrace:
+      	chromedriver!GetHandleVerifier [0x7ff6ce9dd6d5+14ef5]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9dd740+14f60]
+      	chromedriver!(No symbol) [0x7ff6ce72d59d]
+      	chromedriver!(No symbol) [0x7ff6ce735511]
+      	chromedriver!(No symbol) [0x7ff6ce7385d5]
+      	chromedriver!(No symbol) [0x7ff6ce73869f]
+      	chromedriver!(No symbol) [0x7ff6ce78e7ea]
+      	chromedriver!(No symbol) [0x7ff6ce78c6da]
+      	chromedriver!(No symbol) [0x7ff6ce789a27]
+      	chromedriver!(No symbol) [0x7ff6ce7888d7]
+      	chromedriver!(No symbol) [0x7ff6ce77b4f6]
+      	chromedriver!(No symbol) [0x7ff6ce7af76a]
+      	chromedriver!(No symbol) [0x7ff6ce77ad76]
+      	chromedriver!(No symbol) [0x7ff6ce7d44ff]
+      	chromedriver!(No symbol) [0x7ff6ce779608]
+      	chromedriver!(No symbol) [0x7ff6ce77a4f3]
+      	chromedriver!GetHandleVerifier [0x7ff6cecdb779+312f99]
+      	chromedriver!GetHandleVerifier [0x7ff6cecd5c8b+30d4ab]
+      	chromedriver!GetHandleVerifier [0x7ff6cecf9012+330832]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9fa485+31ca5]
+      	chromedriver!GetHandleVerifier [0x7ff6cea02e7c+3a69c]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9e6a74+1e294]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9e6c04+1e424]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9cb327+2b47]
+      	KERNEL32!BaseThreadInitThunk [0x7fff9d12e8d7+17]
+      	ntdll!RtlUserThreadStart [0x7fff9d8ec48c+2c]
+
+    And the user enters from date and to date for leave             # None
+    And the user submits the leave application                      # None
+    Then a success toast message should appear                      # None
+    And the leave balance should be reduced on the screen           # None
+    And the leave status should show "Pending Approval"             # None
+
+Feature: User Authentication # features/login.feature:1
+
+  Background:   # features/login.feature:3
+
+  Scenario: Successful login with valid credentials               # features/login.feature:6
+    Given the user navigates to the OrangeHRM login page          # features/steps/login_steps.py:6
+    When the user enters username "Admin" and password "admin123" # features/steps/login_steps.py:21
+    And the user clicks the login button                          # features/steps/login_steps.py:27
+    Then the user should be redirected to the dashboard page      # features/steps/login_steps.py:32
+
+  Scenario: Unsuccessful login with invalid password                # features/login.feature:11
+    Given the user navigates to the OrangeHRM login page            # features/steps/login_steps.py:6
+    When the user enters username "Admin" and password "invalid123" # features/steps/login_steps.py:21
+    And the user clicks the login button                            # features/steps/login_steps.py:27
+    Then an error message "Invalid credentials" should be displayed # features/steps/login_steps.py:38
+
+Feature: Employee Management - PIM Module # features/pim_employee.feature:1
+
+  Background:   # features/pim_employee.feature:3
+
+  Scenario Outline: Add multiple new employees -- @1.1              # features/pim_employee.feature:15
+    Given the user is logged in as "Admin" with password "admin123" # features/steps/login_steps.py:12
+    And the user navigates to the PIM module                        # features/steps/pim_steps.py:5
+    When the user clicks the Add Employee button                    # features/steps/pim_steps.py:11
+    And the user enters first name "John" and last name "Smith"     # features/steps/pim_steps.py:16
+    And the user clicks the save button                             # features/steps/pim_steps.py:22
+    Then the employee "John Smith" should be created successfully   # features/steps/pim_steps.py:27
+
+  Scenario Outline: Add multiple new employees -- @1.2              # features/pim_employee.feature:16
+    Given the user is logged in as "Admin" with password "admin123" # features/steps/login_steps.py:12
+    And the user navigates to the PIM module                        # features/steps/pim_steps.py:5
+    When the user clicks the Add Employee button                    # features/steps/pim_steps.py:11
+    And the user enters first name "Jane" and last name "Doe"       # features/steps/pim_steps.py:16
+    And the user clicks the save button                             # features/steps/pim_steps.py:22
+    Then the employee "Jane Doe" should be created successfully     # features/steps/pim_steps.py:27
+
+  Scenario Outline: Add multiple new employees -- @1.3                 # features/pim_employee.feature:17
+    Given the user is logged in as "Admin" with password "admin123"    # features/steps/login_steps.py:12
+    And the user navigates to the PIM module                           # features/steps/pim_steps.py:5
+    When the user clicks the Add Employee button                       # features/steps/pim_steps.py:11
+    And the user enters first name "Robert" and last name "Williams"   # features/steps/pim_steps.py:16
+    And the user clicks the save button                                # features/steps/pim_steps.py:22
+    Then the employee "Robert Williams" should be created successfully # features/steps/pim_steps.py:27
+
+@Regression @Profile
+Feature: Profile Update - My Info Section # features/profile_update.feature:2
+
+  Background:   # features/profile_update.feature:4
+
+  @Smoke @Profile
+  Scenario: Update nickname and upload profile photograph           # features/profile_update.feature:9
+    Given the user is logged in as "Admin" with password "admin123" # features/steps/login_steps.py:12
+    And the user navigates to the My Info section                   # features/steps/profile_steps.py:5
+    When the user updates the nickname to "AdminNick"               # features/steps/profile_steps.py:11
+      Traceback (most recent call last):
+        File "C:\Program Files\Python314\Lib\site-packages\behave\model.py", line 1329, in run
+          match.run(runner.context)
+          ~~~~~~~~~^^^^^^^^^^^^^^^^
+        File "C:\Program Files\Python314\Lib\site-packages\behave\matchers.py", line 98, in run
+          self.func(context, *args, **kwargs)
+          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\profile_steps.py", line 13, in step_update_nickname
+          context.my_info_page.update_nickname(nickname)
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+        File "C:\Users\wprjavanguser\Downloads\orangehrm_bdd (2)\orangehrm_bdd\features\..\pages\my_info_page.py", line 23, in update_nickname
+          field = self.wait.until(EC.visibility_of_element_located(self.NICKNAME_INPUT))
+        File "C:\Program Files\Python314\Lib\site-packages\selenium\webdriver\support\wait.py", line 105, in until
+          raise TimeoutException(message, screen, stacktrace)
+      selenium.common.exceptions.TimeoutException: Message: 
+      Stacktrace:
+      	chromedriver!GetHandleVerifier [0x7ff6ce9dd6d5+14ef5]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9dd740+14f60]
+      	chromedriver!(No symbol) [0x7ff6ce72d59d]
+      	chromedriver!(No symbol) [0x7ff6ce786f42]
+      	chromedriver!(No symbol) [0x7ff6ce78724c]
+      	chromedriver!(No symbol) [0x7ff6ce7d7967]
+      	chromedriver!(No symbol) [0x7ff6ce7d44ff]
+      	chromedriver!(No symbol) [0x7ff6ce779608]
+      	chromedriver!(No symbol) [0x7ff6ce77a4f3]
+      	chromedriver!GetHandleVerifier [0x7ff6cecdb779+312f99]
+      	chromedriver!GetHandleVerifier [0x7ff6cecd5c8b+30d4ab]
+      	chromedriver!GetHandleVerifier [0x7ff6cecf9012+330832]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9fa485+31ca5]
+      	chromedriver!GetHandleVerifier [0x7ff6cea02e7c+3a69c]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9e6a74+1e294]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9e6c04+1e424]
+      	chromedriver!GetHandleVerifier [0x7ff6ce9cb327+2b47]
+      	KERNEL32!BaseThreadInitThunk [0x7fff9d12e8d7+17]
+      	ntdll!RtlUserThreadStart [0x7fff9d8ec48c+2c]
+
+    And the user clicks the save button on personal details         # None
+    Then the nickname should be saved successfully                  # None
+    When the user uploads a profile photograph "profile_pic.jpg"    # None
+    Then the profile photograph should be updated successfully      # None
+

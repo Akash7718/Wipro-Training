@@ -1,0 +1,1 @@
+[32mINFO    [0m pages.product_details_page:product_details_page.py:24 Alert accepted with text: 'Product added'

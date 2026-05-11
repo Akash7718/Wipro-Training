@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d736fb4b-ef29-4a84-a3c7-a4a0136a6666" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/pages/home_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/pages/product_listing_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/pages/product_listing_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/tests/test_amazon.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Selenium/SeleniumPOM/tests/test_amazon.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3DP51sKcrT7ISl5qAUprvgXBVvf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for amazon_automation.test_filters_and_sync.executor": "Run",
+    "Python tests.Python tests for amazon_automation.test_footer_links.executor": "Run",
+    "Python tests.Python tests for amazon_automation.test_implicit_explicit_waits.executor": "Run",
+    "Python tests.Python tests for amazon_automation.test_navigation_and_title.executor": "Run",
+    "Python tests.Python tests for amazon_automation.test_search_bar.executor": "Run",
+    "Python tests.Python tests for amazon_automation.test_waits.executor": "Run",
+    "Python tests.Python tests in amazon_automation.py.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests for amazon_automation.test_filters_and_sync">
+    <configuration name="Python tests for amazon_automation.test_filters_and_sync" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="D_10" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;amazon_automation.test_filters_and_sync&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for amazon_automation.test_footer_links" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="D_10" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;amazon_automation.test_footer_links&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for amazon_automation.test_implicit_explicit_waits" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="D_10" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;amazon_automation.test_implicit_explicit_waits&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for amazon_automation.test_search_bar" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="D_10" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;amazon_automation.test_search_bar&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for amazon_automation.test_waits" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="D_10" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;amazon_automation.test_waits&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for amazon_automation.test_filters_and_sync" />
+        <item itemvalue="Python tests.Python tests for amazon_automation.test_footer_links" />
+        <item itemvalue="Python tests.Python tests for amazon_automation.test_implicit_explicit_waits" />
+        <item itemvalue="Python tests.Python tests for amazon_automation.test_waits" />
+        <item itemvalue="Python tests.Python tests for amazon_automation.test_search_bar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-02acdf704d18-cbfc7b97e6b2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.28539.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d736fb4b-ef29-4a84-a3c7-a4a0136a6666" name="Changes" comment="" />
+      <created>1778170653467</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778170653467</updated>
+    </task>
+    <servers />
+  </component>
+</project>
